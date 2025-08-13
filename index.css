@@ -61,9 +61,22 @@ header p {
   color: white;
 }
 
-.social-contact a.facebook { background: #1877f2; }
-.social-contact a.zalo { background: #0068ff; }
-.social-contact a.instagram { background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); }
+.social-contact a.facebook { 
+  background: #1877f2; 
+}
+
+.social-contact a.zalo { 
+  background: #0068ff; 
+}
+
+.social-contact a.instagram { 
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); 
+}
+
+.social-contact a.whatsapp {
+  background: #25d366; /* Màu xanh WhatsApp */
+}
+
 
 .social-contact a:hover {
   transform: scale(1.15) rotate(5deg);
@@ -80,17 +93,46 @@ section {
   margin: auto;
 }
 
-/* ABOUT */
-.about img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+/* ABOUT SLIDER */
+.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.about img:hover {
-  transform: scale(1.03);
+.about-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.about-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.about-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.about-slider button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.about-slider button:hover {
+  transform: scale(1.2);
 }
 
 /* BOOKING */

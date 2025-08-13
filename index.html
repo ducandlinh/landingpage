@@ -16,26 +16,44 @@
     <p>Trải nghiệm nghỉ dưỡng sang trọng bên bờ biển Nha Trang</p>
     <!-- Liên hệ ngay -->
     <div class="social-contact">
-      <span>Liên hệ ngay cho chúng tôi:</span>
-      <a href="https://m.me/your_facebook_page" target="_blank" title="Facebook Messenger" class="facebook">
-        <i class="fab fa-facebook-messenger"></i>
-      </a>
-      <a href="https://zalo.me/84845225205" target="_blank" title="Chat Zalo" class="zalo">
-        <i class="fa-solid fa-comment"></i>
-      </a>
-      <a href="https://www.instagram.com/your_instagram" target="_blank" title="Instagram" class="instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
+  <span>Liên hệ ngay cho chúng tôi:</span>
+
+  <!-- Facebook Messenger -->
+  <a href="https://m.me/your_facebook_page" target="_blank" title="Facebook Messenger" class="facebook">
+    <i class="fab fa-facebook-messenger"></i>
+  </a>
+
+  <!-- Zalo -->
+  <a href="https://zalo.me/84845225205" target="_blank" title="Chat Zalo" class="zalo">
+    <i class="fa-solid fa-comment"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/your_instagram" target="_blank" title="Instagram" class="instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/84987654321" target="_blank" title="Chat WhatsApp" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
   </div>
 </header>
 
 <section class="about">
   <div class="container">
     <h2>Về Chúng Tôi</h2>
-    <p>Khách Sạn Biển Xanh tọa lạc ngay trung tâm thành phố biển Nha Trang, 
-       với 120 phòng view biển, hồ bơi vô cực và nhà hàng 5 sao.</p>
-    <img src="https://acihome.vn/uploads/19/thiet-ke-khach-san-cao-cap-ket-hop-giua-tham-my-cong-nang-4.jpg" alt="Khách sạn view biển">
+    <div class="about-slider">
+      <button class="prev"><i class="fas fa-chevron-left"></i></button>
+      <div class="about-content">
+        <img src="https://acihome.vn/uploads/19/thiet-ke-khach-san-cao-cap-ket-hop-giua-tham-my-cong-nang-4.jpg" alt="Khách sạn view biển">
+        <p>Khách Sạn Biển Xanh tọa lạc ngay trung tâm thành phố biển Nha Trang, 
+           với 120 phòng view biển, hồ bơi vô cực và nhà hàng 5 sao.</p>
+      </div>
+      <button class="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
   </div>
 </section>
 
@@ -44,6 +62,7 @@
     <h2>Gửi yêu cầu đến chúng tôi</h2>
     <form>
       <input type="text" placeholder="Họ và Tên" required>
+      <input type="text" placeholder="Số Điện Thoại" required>
       <input type="email" placeholder="Email" required>
       <input type="date" required>
       <input type="number" placeholder="Số đêm" min="1" required>
@@ -65,5 +84,8 @@
 <footer>
   <p>© 2025 Khách Sạn Biển Xanh - Hotline: 0845 225 205</p>
 </footer>
+
+<!-- JS file -->
+<script src="index.js"></script>
 </body>
 </html>
