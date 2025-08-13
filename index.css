@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: url('https://picsum.photos/id/1015/1600/600') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.btn {
+  background: #ff9800;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+section {
+  padding: 40px 20px;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.about img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.booking form {
+  display: flex;
+  flex-direction: column;
+}
+.booking input, .booking button {
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 16px;
+}
+.booking button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.booking button:hover {
+  background: #45a049;
+}
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
