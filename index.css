@@ -2,63 +2,141 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
+
+/* HEADER */
 header {
   background: url('https://picsum.photos/id/1015/1600/600') no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 80px 20px;
+  position: relative;
 }
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+header h1, header p, header .social-contact {
+  position: relative;
+  z-index: 1;
+}
+
 header h1 {
   font-size: 48px;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
+
 header p {
   font-size: 20px;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
-.btn {
-  background: #ff9800;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 8px;
+
+/* LIÊN HỆ */
+.social-contact {
+  margin-top: 20px;
+}
+
+.social-contact span {
+  display: block;
   font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
+
+.social-contact a {
+  font-size: 28px;
+  margin: 0 8px;
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.social-contact a.facebook { background: #1877f2; }
+.social-contact a.zalo { background: #0068ff; }
+.social-contact a.instagram { background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); }
+
+.social-contact a:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* SECTION */
 section {
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
+
 .container {
   max-width: 1000px;
   margin: auto;
 }
+
+/* ABOUT */
 .about img {
   width: 100%;
   border-radius: 10px;
   margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
 }
+
+.about img:hover {
+  transform: scale(1.03);
+}
+
+/* BOOKING */
 .booking form {
   display: flex;
   flex-direction: column;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
+
 .booking input, .booking button {
   padding: 12px;
   margin: 8px 0;
   font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
 }
+
+.booking input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
 .booking button {
-  background: #4caf50;
+  background: linear-gradient(135deg, #4caf50, #388e3c);
   color: white;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
+
 .booking button:hover {
-  background: #45a049;
+  background: linear-gradient(135deg, #388e3c, #4caf50);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+
+/* FOOTER */
 footer {
-  background: #333;
+  background: #222;
   color: white;
   text-align: center;
   padding: 15px;
+  font-size: 14px;
 }
