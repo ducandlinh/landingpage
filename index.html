@@ -5,52 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khách Sạn Biển Xanh</title>
   <link rel="stylesheet" href="index.css">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <header>
   <div class="container">
-    <h1>Khách Sạn Biển Xanh</h1>
-    <p>Trải nghiệm nghỉ dưỡng sang trọng bên bờ biển Nha Trang</p>
+    <h1 data-lang="title">Khách Sạn Biển Xanh</h1>
+    <p data-lang="subtitle">Trải nghiệm nghỉ dưỡng sang trọng bên bờ biển Nha Trang</p>
+
+    <!-- Chọn ngôn ngữ -->
+    <div class="lang-switcher">
+      <button onclick="setLanguage('vi')">🇻🇳 Tiếng Việt</button>
+      <button onclick="setLanguage('en')">🇬🇧 English</button>
+    </div>
+
     <!-- Liên hệ ngay -->
     <div class="social-contact">
-  <span>Liên hệ ngay cho chúng tôi:</span>
-
-  <!-- Facebook Messenger -->
-  <a href="https://m.me/your_facebook_page" target="_blank" title="Facebook Messenger" class="facebook">
-    <i class="fab fa-facebook-messenger"></i>
-  </a>
-
-  <!-- Zalo -->
-  <a href="https://zalo.me/84845225205" target="_blank" title="Chat Zalo" class="zalo">
-    <i class="fa-solid fa-comment"></i>
-  </a>
-
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/your_instagram" target="_blank" title="Instagram" class="instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/84987654321" target="_blank" title="Chat WhatsApp" class="whatsapp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
-
+      <span data-lang="contact">Liên hệ ngay cho chúng tôi:</span>
+      <a href="https://m.me/your_facebook_page" target="_blank" class="facebook"><i class="fab fa-facebook-messenger"></i></a>
+      <a href="https://zalo.me/84845225205" target="_blank" class="zalo"><i class="fa-solid fa-comment"></i></a>
+      <a href="https://www.instagram.com/your_instagram" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/84987654321" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    </div>
   </div>
 </header>
 
 <section class="about">
   <div class="container">
-    <h2>Về Chúng Tôi</h2>
+    <h2 data-lang="aboutTitle">Về Chúng Tôi</h2>
     <div class="about-slider">
       <button class="prev"><i class="fas fa-chevron-left"></i></button>
       <div class="about-content">
-        <img src="https://acihome.vn/uploads/19/thiet-ke-khach-san-cao-cap-ket-hop-giua-tham-my-cong-nang-4.jpg" alt="Khách sạn view biển">
-        <p>Khách Sạn Biển Xanh tọa lạc ngay trung tâm thành phố biển Nha Trang, 
-           với 120 phòng view biển, hồ bơi vô cực và nhà hàng 5 sao.</p>
+        <img src="https://acihome.vn/uploads/19/thiet-ke-khach-san-cao-cap-ket-hop-giua-tham-my-cong-nang-4.jpg" alt="">
+        <p data-lang="aboutContent">Khách Sạn Biển Xanh tọa lạc ngay trung tâm thành phố biển Nha Trang, với 120 phòng view biển, hồ bơi vô cực và nhà hàng 5 sao.</p>
       </div>
       <button class="next"><i class="fas fa-chevron-right"></i></button>
     </div>
@@ -59,14 +47,14 @@
 
 <section id="booking" class="booking">
   <div class="container">
-    <h2>Gửi yêu cầu đến chúng tôi</h2>
+    <h2 data-lang="bookingTitle">Gửi yêu cầu đến chúng tôi</h2>
     <form>
       <input type="text" placeholder="Họ và Tên" required>
       <input type="text" placeholder="Số Điện Thoại" required>
       <input type="email" placeholder="Email" required>
       <input type="date" required>
       <input type="number" placeholder="Số đêm" min="1" required>
-      <button type="submit">Gửi yêu cầu</button>
+      <button type="submit" data-lang="sendBtn">Gửi yêu cầu</button>
     </form>
   </div>
 </section>
@@ -81,11 +69,20 @@
   </div>
 </section>
 
+
 <footer>
-  <p>© 2025 Khách Sạn Biển Xanh - Hotline: 0845 225 205</p>
+  <p data-lang="footer">© 2025 Khách Sạn Biển Xanh - Hotline: 0845 225 205</p>
 </footer>
 
-<!-- JS file -->
+<!-- Modal phóng to -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="" alt="">
+    <p></p>
+  </div>
+</div>
+
 <script src="index.js"></script>
 </body>
 </html>

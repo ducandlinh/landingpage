@@ -1,111 +1,85 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
   background-color: #f9f9f9;
   color: #333;
 }
 
 /* HEADER */
 header {
-  background: url('https://picsum.photos/id/1015/1600/600') no-repeat center center/cover;
+  background: url('https://picsum.photos/id/1015/1600/600') no-repeat center/cover;
   color: white;
   text-align: center;
   padding: 80px 20px;
   position: relative;
 }
-
 header::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background: rgba(0,0,0,0.4);
 }
-
-header h1, header p, header .social-contact {
+header h1, header p, header .social-contact, .lang-switcher {
   position: relative;
   z-index: 1;
 }
-
 header h1 {
   font-size: 48px;
   margin-bottom: 10px;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
-
 header p {
   font-size: 20px;
   margin-bottom: 20px;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+/* Language switcher */
+.lang-switcher button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.lang-switcher button:hover {
+  background: #0056b3;
 }
 
 /* LIÊN HỆ */
-.social-contact {
-  margin-top: 20px;
-}
-
 .social-contact span {
   display: block;
-  font-size: 18px;
   margin-bottom: 10px;
   font-weight: bold;
 }
-
 .social-contact a {
   font-size: 28px;
   margin: 0 8px;
   padding: 12px;
   border-radius: 50%;
   display: inline-block;
-  transition: all 0.3s ease;
   color: white;
+  transition: all 0.3s;
 }
-
-.social-contact a.facebook { 
-  background: #1877f2; 
-}
-
-.social-contact a.zalo { 
-  background: #0068ff; 
-}
-
-.social-contact a.instagram { 
-  background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5); 
-}
-
-.social-contact a.whatsapp {
-  background: #25d366; /* Màu xanh WhatsApp */
-}
-
-
-.social-contact a:hover {
-  transform: scale(1.15) rotate(5deg);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
+.social-contact a.facebook { background: #1877f2; }
+.social-contact a.zalo { background: #0068ff; }
+.social-contact a.instagram { background: linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5); }
+.social-contact a.whatsapp { background: #25d366; }
+.social-contact a:hover { transform: scale(1.15); }
 
 /* SECTION */
-section {
-  padding: 50px 20px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
+section { padding: 50px 20px; }
+.container { max-width: 1000px; margin: auto; }
 
 /* ABOUT SLIDER */
-.about h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
+.about h2 { text-align: center; margin-bottom: 20px; }
 .about-slider {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-
 .about-content {
   background: white;
   padding: 20px;
@@ -113,26 +87,18 @@ section {
   max-width: 700px;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
-
 .about-content img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-
 .about-slider button {
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
-  color: #333;
-  transition: transform 0.2s ease;
-}
-
-.about-slider button:hover {
-  transform: scale(1.2);
 }
 
 /* BOOKING */
@@ -144,7 +110,6 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
-
 .booking input, .booking button {
   padding: 12px;
   margin: 8px 0;
@@ -152,26 +117,10 @@ section {
   border-radius: 6px;
   border: 1px solid #ddd;
 }
-
-.booking input:focus {
-  outline: none;
-  border-color: #4caf50;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
-}
-
 .booking button {
   background: linear-gradient(135deg, #4caf50, #388e3c);
   color: white;
   border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.booking button:hover {
-  background: linear-gradient(135deg, #388e3c, #4caf50);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
@@ -180,5 +129,38 @@ footer {
   color: white;
   text-align: center;
   padding: 15px;
-  font-size: 14px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  text-align: center;
+}
+.modal-content img { max-width: 100%; border-radius: 8px; }
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 { font-size: 32px; }
+  header p { font-size: 16px; }
+  .about-slider { flex-direction: column; }
+  .about-slider button { font-size: 22px; }
 }
