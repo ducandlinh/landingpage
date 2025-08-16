@@ -77,3 +77,18 @@ document.querySelector(".about-content").addEventListener("click", () => {
 });
 closeBtn.onclick = () => modal.style.display = "none";
 window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+
+// Lắng nghe sự kiện submit form
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Gửi dữ liệu qua EmailJS
+  emailjs.sendForm("service_gmail", "template_h459kjq", this)
+    .then(() => {
+      alert("✅ Yêu cầu của bạn đã được gửi thành công!");
+      this.reset(); // reset form sau khi gửi
+    }, (err) => {
+      alert("❌ Gửi thất bại. Vui lòng thử lại.");
+      console.error("EmailJS Error:", err);
+    });
+});
