@@ -1,26 +1,26 @@
 // Dữ liệu đa ngôn ngữ
 const translations = {
   vi: {
-    title: "Khách Sạn Biển Xanh",
-    subtitle: "Trải nghiệm nghỉ dưỡng sang trọng bên bờ biển Nha Trang",
+    title: "Khách Sạn Bầu Trời",
+    subtitle: "Trải nghiệm nghỉ dưỡng sang trọng tại Thành Phố Hà Giang",
     contact: "Liên hệ ngay cho chúng tôi:",
     aboutTitle: "Về Chúng Tôi",
-    aboutContent: "Khách Sạn Biển Xanh tọa lạc ngay trung tâm thành phố biển Nha Trang, với 120 phòng view biển, hồ bơi vô cực và nhà hàng 5 sao.",
+    aboutContent: "Khách Sạn Biển Xanh tọa lạc ngay trung tâm thành phố Hà Giang, với 120 phòng view biển, hồ bơi vô cực và nhà hàng 5 sao.",
     bookingTitle: "Gửi yêu cầu đến chúng tôi",
     sendBtn: "Gửi yêu cầu",
     locationTitle: "Vị trí của chúng tôi",
-    footer: "© 2025 Khách Sạn Biển Xanh - Hotline: 0845 225 205"
+    footer: "© 2025 Khách Sạn Bầu Trời - Hotline: 0845 225 205"
   },
   en: {
-    title: "Blue Sea Hotel",
-    subtitle: "Experience luxury beachside stay in Nha Trang",
+    title: "Blue Sky Hotel",
+    subtitle: "Experience luxury in Hà Giang city",
     contact: "Contact us now:",
     aboutTitle: "About Us",
-    aboutContent: "Blue Sea Hotel is located in the heart of Nha Trang, featuring 120 sea-view rooms, infinity pool, and a 5-star restaurant.",
+    aboutContent: "Blue Sky Hotel is located in Hà Giang city, featuring 120 sea-view rooms, infinity pool, and a 5-star restaurant.",
     bookingTitle: "Send your request to us",
     sendBtn: "Send Request",
     locationTitle: "Our Location",
-    footer: "© 2025 Blue Sea Hotel - Hotline: 0845 225 205"
+    footer: "© 2025 Blue Sky Hotel - Hotline: 0845 225 205"
   }
 };
 
